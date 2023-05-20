@@ -5,6 +5,9 @@
     <script src="script.js"></script>
     <link id="pfp" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
+      :root {
+        --favcolor: rgb(77, 26, 77);
+      }
     html {  
         height: 100%;  
         font-size: 100%  
@@ -12,7 +15,10 @@
        body {  
         font: 13px arial;  
         sans-serif;  
+        background: linear-gradient(to top left, brown, rgb(77, 26, 77));
+        background-blend-mode: screen;
        }  
+  
        /* ------- Nav Items ------- */  
        ul {  
         list-style: none;  
@@ -100,10 +106,13 @@
        }  
        .logo {  
             display: 100%;  
-        height: 92px;  
-        width: 272px;  
+        height: 100px;  
+        width: 495px;  
         display: block;  
         margin: auto;  
+        font-size: 4rem;
+        color: white;
+        font-family: cursive;
        }  
        .form {  
         display: block;  
@@ -115,13 +124,14 @@
         margin: auto;  
         height: 39px;  
         border: .7px solid #E4E4E4;  
-        background-color: #fff;  
+        background-color: #f1f1f1;  
         box-shadow:0px 1px 4px #E4E4E4;  
         margin-bottom: 20px;  
         outline: none;  
         text-indent: 15px;  
         padding-left: 20px;
         padding-right: 20px;
+        border: 2.5px solid var(--favcolor);
        }  
        #search:hover, #search:active {  
         padding-bottom: 2px;  
@@ -129,10 +139,10 @@
         margin-top: -1px;  
         width: 585px;  
         box-shadow:0px 3px 8px #E4E4E4;  
-        outline: none;  
-       }  
+        outline: none; 
+             }  
        .mic {  
-        width: 14px;  
+        width: 25px;  
         height: 20px;  
         position: relative;  
         left: 595px;  
@@ -146,7 +156,7 @@
        .search {
         height: 20px;  
         position: relative;  
-        left: -8px;  
+        left: -20px;  
         top: 34px; 
        }
 
@@ -159,10 +169,7 @@
         height: 36px;  
             cursor: pointer;  
         line-height: 27px;  
-        background-color: #f2f2f2;  
-        border: 1px solid #f2f2f2;  
-        border-radius: 2px;  
-        color: #757575;  
+        border-radius: 2px;   
         cursor: default;  
         font-family: arial,sans-serif;  
         font-size: 13px;  
@@ -171,10 +178,13 @@
         min-width: 54px;  
         padding: 0 16px;  
         text-align: center; 
+        background-color: rgb(255, 255, 255);
+            color: white; 
+            border: 2.5px solid white;
        }  
 
        a:link, a:visited, a:active {
-        color: #757575 !important;
+        color: white !important;
         text-decoration: none; 
        }
 
@@ -182,11 +192,18 @@
         position: relative;  
         left: 25%;  
         right: -50%;  
-            cursor: pointer;  
+            cursor: pointer; 
        }  
+
+       #pacman:hover {
+        color: black !important;
+       }
+
        .submit_buttons:hover {  
         border: .7px solid #d0d0d0;  
-        box-shadow:0px 1px 4px #E4E4E4;  
+        box-shadow:0px 1px 8px #E4E4E4;  
+        background-color: white;
+        color: black !important;
        }  
        /* ------- Footer ------- */  
        .l_ftr {  
@@ -222,32 +239,39 @@
     <nav>
 
         <ul class="r_nav">
-          <li><a href="#">Gmail</a></li>
+          <!--
+          <li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
           <li><a href="#">Images</a></li>
           <li><a href="#"><img class="apps" src="https://thumb.ibb.co/gykLCw/grid_menu.png"</a></li>
           <li class="sign_in"><a href="#">Sign in</a></li>
+          -->
+          <li style="color: white;">Created By: Hamza Nasry</li>
         </ul>
-
+<!--
         <ul class="l_nav">
             <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
             <li><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
           </ul>
       </nav>
+      -->
+
     
       <section class="cntr_pg">
-        <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" />
-        <a href=error.html><img class="mic" src="customtab.html" alt="" /></a>
-        <img id="icon" class="search" src="https://www.simpleimageresizer.com/_uploads/photos/420311f8/searchicon_48x48.png" alt="" />
+        <span class="logo">SIMGASEARCH+</span> 
+        <a href=error.html><img class="mic" src="https://www.simpleimageresizer.com/_uploads/photos/420311f8/x_48x48.png" alt="" /></a>
+        <img id="icon" class="search" src="https://www.simpleimageresizer.com/_uploads/photos/420311f8/png-clipart-computer-icons-search-icon-zooming-user-interface-computer-icons_1_48x48.png" alt="" />
         <form action="#" method="#" name="searchquery">
           <input type="text" name="searchfield" id="search"></input>
+                      <!--
           <div class="search_buttons">
-            <button id="googlesearch" class="submit_buttons">Google Search</button>
-            <button class="submit_buttons"><a href="https://www.google.com/search?q=pacman&csf=b&ct=ifl&cad=2:playful&ei=CiVpZLf2BtXH9APM7LToDw&ved=0ahUKEwi3o7aL1oT_AhXVI30KHUw2Df0QnRsIFQ&rct=j">I'm Feeling Lucky</a></button>
+
+            <button id="googlesearch" class="submit_buttons">Saiga Search</button>
+            <button id="pacman" class="submit_buttons"><a href="https://www.google.com/search?q=pacman&csf=b&ct=ifl&cad=2:playful&ei=CiVpZLf2BtXH9APM7LToDw&ved=0ahUKEwi3o7aL1oT_AhXVI30KHUw2Df0QnRsIFQ&rct=j">Play PAC-MAN</a></button>
+
           </div>
         </form>
+        
       </section>
-    
-    
     
     
     
