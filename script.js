@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var cleanQuery = text.replace(" ", "+");
       var url = 'http://www.google.com/search?q=' + cleanQuery;
         
-        window.open (
-            url, "_blank");
-        }
+
+      window.open(url);
     }
   });
