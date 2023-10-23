@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     googleSearchButton.addEventListener("click", function(event) {
       googleSearch();
+        console.log(searchInput.value);
       event.preventDefault();
     });
   
